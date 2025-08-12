@@ -25,6 +25,7 @@ listswrap.addEventListener("click", (event) =>{
 
 let bajarilganlar =document.getElementById("Bajarilganlar");
 let bajarmaganlar =document.getElementById("bajarmaganlar");
+let hammasi =document.getElementById("hammasi");
 
 let inputlar =document.querySelectorAll("input");
 inputlar.forEach(input => {
@@ -38,16 +39,69 @@ inputlar.forEach(input => {
     })
 });
 
+bajarilganlar.addEventListener("click", (event) =>{
+    if(event.target.nodeName ==="I"){
+        event.target.parentElement.remove();
+    }
+})
 
 let done =document.getElementById("done");
 let undone =document.getElementById("undone");
 let all =document.getElementById("all");
 
 done.addEventListener("click", ()=>{
-   
+   bajarilganlar.style.display ="flex";
+   bajarmaganlar.style.display ="none";
+   hammasi.style.display ="none";
+   addbtn.style.display ="none"
+})
+
+undone.addEventListener("click", ()=>{
+    bajarilganlar.style.display ="none";
+    bajarmaganlar.style.display ="flex";
+    hammasi.style.display ="none";
+    addbtn.style.display ="none"
+ })
+
+
+ all.addEventListener("click", ()=>{
+    bajarilganlar.style.display ="flex";
+    bajarmaganlar.style.display ="flex";
+    hammasi.style.display ="flex";
+    addbtn.style.display ="flex"
+ })
+ let h2 =document.querySelector("h2");
+
+
+ undone.addEventListener("click", (event) =>{
+    if(event.target.nodeName ==="I"){
+        event.target.parentElement.remove();
+    }
 })
 
 
+all.addEventListener("click", (event) =>{
+    if(event.target.nodeName ==="I"){
+        event.target.parentElement.remove();
+    }
+})
+
+
+done.addEventListener("click", ()=>{
+    done.classList.toggle("unique")
+    h2.textContent ='Bajarilganlar'
+});
+
+undone.addEventListener("click", ()=>{
+    undone.classList.toggle("unique")
+    h2.textContent ='Bajarilmaganlar'
+})
+
+
+all.addEventListener("click", ()=>{
+    all.classList.toggle("unique")
+    h2.textContent ='hammasi'
+})
 
 
 
