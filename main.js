@@ -78,8 +78,6 @@ undone.addEventListener("click", ()=>{
     h2.textContent ='hammasi';
     done.classList.remove("unique");
     undone.classList.remove("unique");
-    let h3 =document.querySelector("h3");
-    h3.style.display ="none";
  })
 
 
