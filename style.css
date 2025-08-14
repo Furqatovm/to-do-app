@@ -159,6 +159,7 @@ input{
     max-width: 1000px;
     margin: 0 auto;
     padding: 0rem 1rem;
+    margin-top: 1rem;
 }
 #bajarmaganlar{
     display: none;
@@ -167,7 +168,13 @@ input{
     max-width: 1000px;
     margin: 0 auto;
     padding: 0rem 1rem;
+    margin-top: 1rem;
 }
 
+
+#hammasi{
+    margin-top: 1rem;
+    display: none;
+}
 
 
